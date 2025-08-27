@@ -1,6 +1,6 @@
 <div class="row mb-3">
     <div class="col-md-4">
-        <label for="stock_quantity" class="form-label">Stock Quantity<span class="text-danger">*</span></label>
+        <label for="stock_quantity" class="form-label">Stock Quantity</label>
         <input type="text" name="stock_quantity" id="stock_quantity" class="form-control numbers-only"
             value="{{ old('stock_quantity', $product?->inventory?->stock_quantity ?? '') }}" placeholder="0">
         @error('stock_quantity')
