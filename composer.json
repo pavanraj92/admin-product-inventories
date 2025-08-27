@@ -1,0 +1,22 @@
+{
+    "name": "admin/product_inventories",
+    "description": "Provides product inventory management, including tracking stock levels, movements, and related financial activities.",
+    "type": "library",
+    "version": "1.0.0",  
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+        "admin\\product_inventories\\": "src/"
+      }
+    },
+    "extra": { 
+      "laravel": {
+        "providers": [
+          "admin\\product_inventories\\ProductInventoryServiceProvider"
+        ]
+      }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+  }
+  
