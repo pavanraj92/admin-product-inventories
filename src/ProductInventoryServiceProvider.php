@@ -139,6 +139,11 @@ class ProductInventoryServiceProvider extends ServiceProvider
     protected function transformModelNamespaces($content)
     {
         // Any model-specific transformations
+        $content = str_replace(
+            'use admin\\products\\Models\\Product;',
+            'use Modules\\Products\\app\\Models\\Product;',
+            $content
+        );
         return $content;
     }
 
