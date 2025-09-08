@@ -4,6 +4,7 @@ namespace admin\product_inventories\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use admin\products\Models\Product;
 
 class ProductInventory extends Model
 {
@@ -18,8 +19,6 @@ class ProductInventory extends Model
 
     public function product()
     {
-        if (class_exists(\admin\products\Models\Product::class)) {
-            return $this->belongsTo(\admin\products\Models\Product::class);
-        }
+        return $this->belongsTo(Product::class);
     }
 }

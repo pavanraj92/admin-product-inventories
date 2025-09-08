@@ -83,6 +83,12 @@ class PublishProductInventoryModuleCommand extends Command
                 'use Modules\\Inventories\\app\\Models\\ProductInventory;',
                 $content
             );
+        } elseif (str_contains($sourceFile, 'Models')) {
+            $content = str_replace(
+                'use admin\\products\\Models\\Product;',
+                'use Modules\\Products\\app\\Models\\Product;',
+                $content
+            );
         }
 
         return $content;
